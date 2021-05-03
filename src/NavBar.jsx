@@ -8,7 +8,7 @@ import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
-import { AiFillBank } from "react-icons/ai";
+import { HiOutlineChevronDown } from "react-icons/hi";
 import IconButton from "@material-ui/core/IconButton";
 import { AiTwotonePhone } from "react-icons/ai";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -36,9 +36,11 @@ const useStyles = makeStyles((theme) => ({
   },
   box_links: {
     display: "flex",
+    color: "#f7f7f7",
   },
   box_typography: {
-    marginLeft: theme.spacing(2),
+    marginLeft: theme.spacing(4),
+    color: "#f7f7f7",
   },
   right_edge: {
     display: "flex",
@@ -62,24 +64,27 @@ function NavBar() {
                 className={`${classes.box_links} ${classes.title}`}
                 textAlign="center"
               >
-                {" "}
                 <Typography
                   className={classes.box_typography}
                   variant="subtitle1"
                 >
                   HOME
+                  <HiOutlineChevronDown size="1.1em" color="#f7f7f7" />
                 </Typography>
                 <Typography
                   className={classes.box_typography}
                   variant="subtitle1"
                 >
                   PAGES
+                  <HiOutlineChevronDown size="1.1em" color="#f7f7f7" />
                 </Typography>{" "}
                 <Typography
                   className={classes.box_typography}
                   variant="subtitle1"
+                  align="center"
                 >
                   EXTRA PAGES
+                  <HiOutlineChevronDown size="1.1em" color="#f7f7f7" />
                 </Typography>
                 <Typography
                   className={classes.box_typography}
@@ -96,7 +101,7 @@ function NavBar() {
               </Box>
               <Box className={classes.right_edge}>
                 <Typography>Need Help?</Typography>
-                <Typography variant="body2">08033535184</Typography>
+                <Typography variant="caption">0803-3535-184</Typography>
               </Box>
             </Toolbar>
           </Container>
