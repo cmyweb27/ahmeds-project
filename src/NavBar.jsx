@@ -2,7 +2,7 @@ import React from "react";
 import logo from "./logo_white.svg";
 import "./App.css";
 import Typography from "@material-ui/core/Typography";
-import Button from "@material-ui/core/Button";
+
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import { makeStyles } from "@material-ui/core/styles";
@@ -10,7 +10,7 @@ import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
 import { HiOutlineChevronDown } from "react-icons/hi";
 import IconButton from "@material-ui/core/IconButton";
-import { AiTwotonePhone } from "react-icons/ai";
+
 import { GiHamburgerMenu } from "react-icons/gi";
 import { FaUserCircle } from "react-icons/fa";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
@@ -50,7 +50,7 @@ const useStyles = makeStyles((theme) => ({
 function NavBar() {
   const classes = useStyles();
   const matches = useMediaQuery("(min-width:700px)");
-  console.log(matches, "matches");
+
   return (
     <div className={classes.root}>
       {matches ? (

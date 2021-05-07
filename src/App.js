@@ -1,10 +1,18 @@
+import Collections from "./Collections";
 import NavBar from "./NavBar";
+import StickyNav from "./StickyNav";
+import TopSelling from "./TopSelling";
+import { QueryClient, QueryClientProvider } from "react-query";
 
+const queryClient = new QueryClient();
 function App() {
   return (
-    <div>
+    <QueryClientProvider client={queryClient}>
       <NavBar />
-    </div>
+      <StickyNav />
+      <Collections />
+      <TopSelling />
+    </QueryClientProvider>
   );
 }
 
