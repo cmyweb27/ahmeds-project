@@ -26,6 +26,9 @@ const useStyles = makeStyles((theme) => ({
   IconButon: {
     paddingTop: theme.spacing(0),
   },
+  mobile_div: {
+    borderBottom: "solid 1px #d6d1d1",
+  },
 }));
 function Categories() {
   const screenSize = useMediaQuery("(max-width:700px)");
@@ -34,7 +37,7 @@ function Categories() {
   return (
     <div className={classes.root}>
       {screenSize ? (
-        <div>
+        <div className={classes.mobile_div}>
           {" "}
           <Box className={classes.title_box}>
             <Typography

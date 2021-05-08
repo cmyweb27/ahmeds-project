@@ -10,7 +10,7 @@ import IconButton from "@material-ui/core/IconButton";
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    // marginTop: theme.spacing(3),
+    marginTop: "10px",
     // marginBottom: theme.spacing(1),
   },
   box: {
@@ -27,6 +27,9 @@ const useStyles = makeStyles((theme) => ({
   IconButon: {
     paddingTop: theme.spacing(0),
   },
+  mobile_div: {
+    borderBottom: "solid 1px #d6d1d1",
+  },
 }));
 
 function QuickLinks() {
@@ -37,7 +40,7 @@ function QuickLinks() {
   return (
     <div className={classes.root}>
       {screenSize ? (
-        <div>
+        <div className={classes.mobile_div}>
           <Box className={classes.title_box}>
             <Typography
               variant="subtitle2"
@@ -69,7 +72,6 @@ function QuickLinks() {
               <Typography variant="body1">Blog</Typography>
             </Box>
           )}
-          <Divider color="secondary" />
         </div>
       ) : (
         <div>

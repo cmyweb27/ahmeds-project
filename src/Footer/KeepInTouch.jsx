@@ -1,16 +1,18 @@
 import React, { useState } from "react";
+
+import twitter from "../twitter_icon.svg";
+import youtube from "../youtube_icon.svg";
+import facebook from "../facebook_icon.svg";
+import instagram from "../instagram_icon.svg";
 import useMediaQuery from "@material-ui/core/useMediaQuery";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core";
 import Box from "@material-ui/core/Box";
 import IconButton from "@material-ui/core/IconButton";
-import { TiSocialInstagram } from "react-icons/ti";
-import { FaFacebookSquare } from "react-icons/fa";
-import { FaYoutubeSquare } from "react-icons/fa";
-import { FaTwitterSquare } from "react-icons/fa";
+
 import { AiOutlinePlus } from "react-icons/ai";
 import { BiMinus } from "react-icons/bi";
-import Divider from "@material-ui/core/Divider";
+
 const useStyles = makeStyles((theme) => ({
   root: {
     marginTop: "10px",
@@ -33,6 +35,9 @@ const useStyles = makeStyles((theme) => ({
   IconButon: {
     paddingTop: theme.spacing(0),
   },
+  mobile_div: {
+    borderBottom: "solid 1px #d6d1d1",
+  },
 }));
 
 function KeepInTouch() {
@@ -42,7 +47,7 @@ function KeepInTouch() {
   return (
     <div className={classes.root}>
       {screenSize ? (
-        <div>
+        <div className={classes.mobile_div}>
           {" "}
           <Box className={classes.title_box}>
             <Typography
@@ -69,22 +74,21 @@ function KeepInTouch() {
             <Box className={classes.box}>
               <Typography variant="body1">Follow Us</Typography>
               <IconButton className={classes.box_icon}>
-                <TiSocialInstagram color="whitesmoke" size="1.4em" />
+                <img src={youtube} alt="youtube_icon" />
               </IconButton>
               <IconButton className={classes.box_icon}>
-                <FaFacebookSquare color="whitesmoke" size="1.4em" />
+                <img src={facebook} alt="facebook_icon" />
               </IconButton>
               <IconButton className={classes.box_icon}>
-                {" "}
-                <FaYoutubeSquare color="whitesmoke" size="1.4em" />
+                <img src={instagram} alt="instagram_icon" />
               </IconButton>
 
               <IconButton className={classes.box_icon}>
-                <FaTwitterSquare color="whitesmoke" size="1.4em" />
+                {/* <FaTwitterSquare color="whitesmoke" size="1.4em" /> */}
+                <img src={twitter} alt="twitter_icon" />
               </IconButton>
             </Box>
           )}{" "}
-          <Divider color="secondary" />
         </div>
       ) : (
         <div>
@@ -100,18 +104,18 @@ function KeepInTouch() {
           <Box className={classes.box}>
             <Typography variant="body1">Follow Us</Typography>
             <IconButton className={classes.box_icon}>
-              <TiSocialInstagram color="whitesmoke" size="1.4em" />
+              <img src={youtube} alt="youtube_icon" />
             </IconButton>
             <IconButton className={classes.box_icon}>
-              <FaFacebookSquare color="whitesmoke" size="1.4em" />
+              <img src={facebook} alt="facebook_icon" />
             </IconButton>
             <IconButton className={classes.box_icon}>
               {" "}
-              <FaYoutubeSquare color="whitesmoke" size="1.4em" />
+              <img src={instagram} alt="instagram_icon" />
             </IconButton>
 
             <IconButton className={classes.box_icon}>
-              <FaTwitterSquare color="whitesmoke" size="1.4em" />
+              <img src={twitter} alt="twitter_icon" />
             </IconButton>
           </Box>
         </div>

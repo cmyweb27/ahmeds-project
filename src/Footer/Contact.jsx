@@ -38,6 +38,9 @@ const useStyles = makeStyles((theme) => ({
   inner_text: {
     paddingLeft: "8px",
   },
+  mobile_div: {
+    borderBottom: "solid 1px #d6d1d1",
+  },
 }));
 
 function Contact() {
@@ -48,7 +51,7 @@ function Contact() {
   return (
     <div className={classes.root}>
       {screenSize ? (
-        <div>
+        <div className={classes.mobile_div}>
           <Box className={classes.title_box}>
             <Typography
               variant="subtitle2"
